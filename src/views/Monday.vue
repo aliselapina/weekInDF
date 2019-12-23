@@ -1,47 +1,28 @@
 <template>
   <div class="friday content">
-    <img src="@/assets/friday.png" alt="friday">
+    <img src="@/assets/monday.png" alt="monday">
 
-    <h1 class="friday-color">{{ message.title[currentLocale] }}</h1>
+    <h1 class="friday-color">{{ message.title[locale] }}</h1>
     <br />
-    <p>{{ message.content[currentLocale] }}</p>
-
-    <div class="footer friday-color">
-      <select v-model="currentLocale">
-          <option
-          selected="English"
-          v-for="locale in locales"
-          v-bind:key="locale.id"
-          v-bind:value="locale.id"
-          >
-            {{locale.name}}
-          </option>
-      </select>
-      <div>Made by Alise</div>
-    </div>
+    <p>{{ message.content[locale] }}</p>
 
   </div>
 </template>
 
 <script>
 export default {
+  name: 'Monday',
+  props: {
+    locale: { type: String, required: true }
+  },
   data () {
     return {
       message: {
-        title: {
-          en: 'Title',
-          lv: 'Virsraksts'
-        },
+        title: { en: 'First Day', lv: 'Pirmā diena' },
         content: {
           en: 'Some huge text',
-          lv: 'Garš teksts, kas neiederas dizainā'
-        }
-      },
-      currentLocale: 'en',
-      locales: [
-        { id: 'en', name: 'English' },
-        { id: 'lv', name: 'Latviešu' }
-      ]
+          lv: 'Viena no iemīļotākajām fakultātes dzimšanas dienas tradīcijām ir lielās dzimšanas dienas kūkas ēšana LU vestibilā, kur uz gabaliņu kūkas sanāk gan fakultātes studenti un mācībspēki, gan LU darbinieki un fakultātes draugi. Pirms tortes griešanas tradicionāli ciemiņus uzrunā Datorikas fakultātes dekāns, WeAreDots vadītājs un Studentu pašpārvaldes priekšsēdētāja.' }
+      }
     }
   }
 }

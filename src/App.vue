@@ -1,17 +1,43 @@
 <template>
   <div id="app">
-    <div id="nav">
-          <router-link id="monday-nav" to="/">Monday  </router-link>
-          <router-link id="tuesday-nav" to="/tuesday">Tuesday  </router-link>
-          <router-link id="wednesday-nav" to="/wednesday">Wednesday  </router-link>
-          <router-link id="thursday-nav" to="/thursday">Thursday  </router-link>
-          <router-link id="friday-nav" to="/friday">Friday  </router-link>
-          <router-link id="saturday-nav" to="/saturday">Saturday  </router-link>
-          <router-link id="sunday-nav" to="/sunday">Sunday  </router-link>
+    <NavBar :locale="currentLocale"></NavBar>
+    <h1> {{ title[currentLocale]}}</h1>
+    <select v-model="currentLocale">
+      <option selected="English"
+              v-for="locale in locales"
+              v-bind:key="locale.id"
+              v-bind:value="locale.id">
+        {{locale.name}}
+      </option>
+    </select>
+    <router-view :locale="currentLocale"></router-view>
+
+    <div class="footer friday-color">
+      <div>{{footer[currentLocale]}} Alise Rasa Lapiņa</div>
     </div>
-    <router-view/>
+
   </div>
 </template>
+
+<script>
+import NavBar from '@/Components/NavBar.vue'
+export default {
+  components: {
+    NavBar
+  },
+  data () {
+    return {
+      title: { en: 'Birthday week in Faculty of Computing', lv: 'Datorikas fakultātes dzimšanas dienas nedēļa' },
+      footer: { en: 'Made by', lv: 'Darba autors:' },
+      currentLocale: 'lv',
+      locales: [
+        { id: 'en', name: 'English' },
+        { id: 'lv', name: 'Latviešu' }
+      ]
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
