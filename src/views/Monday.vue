@@ -1,7 +1,5 @@
 <template>
   <div class="friday content">
-    <img src="@/assets/monday.png" alt="monday">
-
     <h1 class="friday-color">{{ message.title[locale] }}</h1>
     <br />
     <p>{{ message.content[locale] }}</p>
