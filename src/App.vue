@@ -53,7 +53,7 @@ export default {
     font-size: large;
     color: black;
     &.router-link-exact-active {
-      color: dimgrey;
+      color: dimgrey; 
     }
   }
 }

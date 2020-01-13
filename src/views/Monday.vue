@@ -1,6 +1,5 @@
 <template>
   <div class="friday content">
-<<<<<<< HEAD
     <div class="page-content">
       <img  src="@/assets/monday.png" alt="monday">
     </div>
@@ -9,12 +8,6 @@
       <br />
       <p>{{ message.content[locale] }}</p>
     </div>
-=======
-    <h1 class="friday-color">{{ message.title[locale] }}</h1>
-    <br />
-    <p>{{ message.content[locale] }}</p>
-
->>>>>>> 618cfe1662791f7bf3ab6f372284153379deb4cc
   </div>
 </template>
 
