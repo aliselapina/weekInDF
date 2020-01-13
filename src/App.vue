@@ -12,7 +12,7 @@
     </select>
     <router-view :locale="currentLocale"></router-view>
 
-    <div class="footer friday-color">
+    <div class="footer page-content">
       <div>{{footer[currentLocale]}} Alise Rasa Lapiņa</div>
     </div>
 
@@ -45,16 +45,27 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 #nav {
   padding: 30px;
   a {
     font-weight: bold;
-    color: #2c3e50;
+    font-size: large;
+    color: black;
     &.router-link-exact-active {
-      color: #42b983;
+      color: dimgrey;
     }
   }
 }
+  .page-content {
+    display: inline-block;
+    width: 50%;
+    vertical-align: text-top;
+    h1 {
+         margin-top: 75px;
+       }
+   img {
+     width: 80%
+   }
+  }
 </style>

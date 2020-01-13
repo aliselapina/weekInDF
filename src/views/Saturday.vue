@@ -1,12 +1,14 @@
 <template>
   <div class="friday content">
-    <img src="@/assets/saturday.png" alt="saturday">
-
-    <h1 class="friday-color">{{ message.title[locale] }}</h1>
-    <br />
-    <p>{{ message.content[locale] }}</p>
-
-  </div>
+    <div class="page-content">
+      <img src="@/assets/saturday.png" alt="saturday">
+    </div>
+    <div class="page-content">
+      <h1 class="page-content">{{ message.title[locale] }}</h1>
+      <br />
+      <p>{{ message.content[locale] }}</p>
+      </div>
+    </div>
 </template>
 
 <script>
