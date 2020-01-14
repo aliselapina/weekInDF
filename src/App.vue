@@ -61,9 +61,7 @@ export default {
     display: inline-block;
     width: 50%;
     vertical-align: text-top;
-    h1 {
-         margin-top: 75px;
-       }
+  
    img {
      width: 80%
    }
