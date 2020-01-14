@@ -67,5 +67,9 @@ export default {
    img {
      width: 80%
    }
+    p {
+      margin-right: 50px;
+      margin-top:-20px;
+    }
   }
 </style>
